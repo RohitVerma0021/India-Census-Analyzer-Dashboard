@@ -19,7 +19,6 @@ To use this app, follow these steps:
 4. Run the app: **`streamlit run app.py`**
 5. Open your web browser and go to **`http://localhost:8501`**
 
-
 ## Technologies Used
 - Streamlit
 - Plotly
@@ -29,6 +28,17 @@ To use this app, follow these steps:
 To use this app, follow these steps:
 1. Select the desired options from the dropdown menus.
 2. The results will be displayed in a bar chart and scatter plot for easy comparison.
+## Screenshot
+
+#### ***Overall India Visualization***
+<img src="https://github.com/RohitVerma0021/India-Census-Analyzer-Dashboard/blob/master/in.png" height="300" width="550" >
+
+
+#### ***State by State Comparison***
+
+<img src="https://github.com/RohitVerma0021/India-Census-Analyzer-Dashboard/blob/master/second%20screenshot.png" height="300" width="550" >
+
+
 ## Contributors
 [Rohit Verma (Data Analyst Fresher)](https://www.linkedin.com/in/rohit-verma-3094b8224/)
 
