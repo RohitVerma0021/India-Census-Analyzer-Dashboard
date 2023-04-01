@@ -43,8 +43,8 @@ To use this app, follow these steps:
 
 
 ## Project Links
-- GitHub Repository: https://github.com/RohitVerma0021/india_census_project
-- Live Demo: https://share.streamlit.io/rohitverma0021/india_census_project/main/app.py
+- GitHub Repository: [india_census_project](https://github.com/RohitVerma0021/India-Census-Analyzer-Dashboard)
+- Live Demo: https://rohitverma0021-india-census-analyzer-dashboard-app-x6gl39.streamlit.app/
 
 ## Contributors
 [Rohit Verma (Data Analyst Fresher)](https://www.linkedin.com/in/rohit-verma-3094b8224/)
