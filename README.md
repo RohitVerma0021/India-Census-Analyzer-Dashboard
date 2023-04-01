@@ -42,6 +42,10 @@ To use this app, follow these steps:
 <img src="https://github.com/RohitVerma0021/India-Census-Analyzer-Dashboard/blob/master/second%20screenshot.png" height="300" width="550" >
 
 
+## Project Links
+- GitHub Repository: https://github.com/RohitVerma0021/india_census_project
+- Live Demo: https://share.streamlit.io/rohitverma0021/india_census_project/main/app.py
+
 ## Contributors
 [Rohit Verma (Data Analyst Fresher)](https://www.linkedin.com/in/rohit-verma-3094b8224/)
 
