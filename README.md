@@ -1,4 +1,7 @@
 # India-Census-Analyzer-Dashboard
+
+<img src="h[ttps://github.com/RohitVerma0021/India-Census-Analyzer-Dashboard/blob/master/second%20screenshot.png](https://github.com/RohitVerma0021/India-Census-Analyzer-Dashboard/blob/master/census.png)" height="300" width="550" >
+
 ## Introduction
 The India Census Analyzer Dashboard is a web application that allows users to visualize various demographic and socio-economic indicators across different states and districts in India. The app is built using Streamlit and Plotly, and uses data processing libraries like Pandas and NumPy.
 
