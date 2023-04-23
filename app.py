@@ -1,5 +1,6 @@
+import io
 import streamlit as st
-
+import plotly.io as pio
 import numpy as np
 import pandas as pd
 import plotly.express as px
@@ -33,11 +34,40 @@ def page_data_viz():
     fig2 = px.scatter(df, x=primary, y=secondary, color='State', hover_name='District', height=600)
     st.plotly_chart(fig2, use_container_width=True)
 
+    # Export data
+    if st.button('Export Data'):
+        # Assign value to data variable
+        data = pd.DataFrame(df)
+        csv = data.to_csv(index=False)
+        # Create a download button to download the CSV data
+        st.download_button(
+            label="Download Data",
+            data=csv,
+            file_name='data.csv',
+            mime='text/csv'
+        )
+
+    # Export chart
+    if st.button('Export Chart'):
+        with st.spinner('Exporting chart...'):
+            # Save chart as a BytesIO object
+            img_bytes = io.BytesIO()
+            pio.write_image(fig1, img_bytes, format='png')
+
+            # Download chart as a file
+            st.download_button(
+                label='Download Chart',
+                data=img_bytes.getvalue(),
+                file_name='chart.png',
+                mime='image/png'
+            )
+            st.success('Chart exported successfully.')
+
 
 #================================================================================================================
 
 def data_visualization():
-    st.sidebar.title('Data Visualization about Sencus')
+    st.sidebar.title('Data Visualization about Cencus')
 
     selected_state = st.sidebar.selectbox('Select a state', list_of_states)
     primary = st.sidebar.selectbox('Select Primary Parameter', sorted(df.columns[5:]))
@@ -65,6 +95,36 @@ def data_visualization():
                                     mapbox_style="carto-positron", width=1200, height=700, hover_name='District')
 
             st.plotly_chart(fig, use_container_width=True)
+
+
+    # Export data
+    if st.button('Export Data'):
+        # Assign value to data variable
+        data = pd.DataFrame(df)
+        csv = data.to_csv(index=False)
+        # Create a download button to download the CSV data
+        st.download_button(
+            label="Download Data",
+            data=csv,
+            file_name='data.csv',
+            mime='text/csv'
+        )
+
+    # Export chart
+    if st.button('Export Chart'):
+        with st.spinner('Exporting chart...'):
+            # Save chart as a BytesIO object
+            img_bytes = io.BytesIO()
+            pio.write_image(fig, img_bytes, format='png')
+
+            # Download chart as a file
+            st.download_button(
+                label='Download Chart',
+                data=img_bytes.getvalue(),
+                file_name='chart.png',
+                mime='image/png'
+            )
+            st.success('Chart exported successfully.')
 #================================================================================================================
 
 
@@ -84,6 +144,35 @@ def district_wise():
         fig.update_layout(xaxis={'categoryorder':'total descending'})
         st.plotly_chart(fig, use_container_width=True)
 
+
+    # Export data
+    if st.button('Export Data'):
+        # Assign value to data variable
+        data = pd.DataFrame(df)
+        csv = data.to_csv(index=False)
+        # Create a download button to download the CSV data
+        st.download_button(
+            label="Download Data",
+            data=csv,
+            file_name='data.csv',
+            mime='text/csv'
+        )
+
+    # Export chart
+    if st.button('Export Chart'):
+        with st.spinner('Exporting chart...'):
+            # Save chart as a BytesIO object
+            img_bytes = io.BytesIO()
+            pio.write_image(fig, img_bytes, format='png')
+
+            # Download chart as a file
+            st.download_button(
+                label='Download Chart',
+                data=img_bytes.getvalue(),
+                file_name='chart.png',
+                mime='image/png'
+            )
+            st.success('Chart exported successfully.')
 
     # Create a scatter plot to show the secondary parameter vs. primary parameter for all states
     #-fig2 = px.scatter(df, x=primary, y=secondary, color='State', hover_name='District', height=600)
@@ -161,3 +250,8 @@ page = st.sidebar.radio('Go to', list(pages.keys()))
 
 # Display the selected page
 pages[page]()
+# The aim of this project is to create a web application that allows users to visualize various
+# demographic and socio-economic indicators across different states and districts in India.--------------------
+#The app will provide various visualization options, including scatter plots and scatter_mapbox,
+# to help users gain insights into the data. Users can compare different states based on primary and secondary parameters selected from a dropdown menu.
+# The results will be displayed in a bar chart and scatter plot for easy comparison.
