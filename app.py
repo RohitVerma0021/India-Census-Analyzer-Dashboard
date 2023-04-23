@@ -67,6 +67,7 @@ def page_data_viz():
 #================================================================================================================
 
 def data_visualization():
+
     st.sidebar.title('Data Visualization about Cencus')
 
     selected_state = st.sidebar.selectbox('Select a state', list_of_states)
@@ -81,20 +82,20 @@ def data_visualization():
         st.text('Color represents secondary parameter')
         if selected_state == 'Overall India':
             # plot for india
-            fig = px.scatter_mapbox(df, lat="Latitude", lon="Longitude", size=primary, color=secondary, zoom=4,
+            fig1 = px.scatter_mapbox(df, lat="Latitude", lon="Longitude", size=primary, color=secondary, zoom=4,
                                     size_max=35,
                                     mapbox_style="carto-positron", width=1200, height=700, hover_name='District')
 
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig1, use_container_width=True)
         else:
             # plot for state
             state_df = df[df['State'] == selected_state]
 
-            fig = px.scatter_mapbox(state_df, lat="Latitude", lon="Longitude", size=primary, color=secondary, zoom=6,
+            fig1 = px.scatter_mapbox(state_df, lat="Latitude", lon="Longitude", size=primary, color=secondary, zoom=6,
                                     size_max=35,
                                     mapbox_style="carto-positron", width=1200, height=700, hover_name='District')
 
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig1, use_container_width=True)
 
 
     # Export data
@@ -110,21 +111,6 @@ def data_visualization():
             mime='text/csv'
         )
 
-    # Export chart
-    if st.button('Export Chart'):
-        with st.spinner('Exporting chart...'):
-            # Save chart as a BytesIO object
-            img_bytes = io.BytesIO()
-            pio.write_image(fig, img_bytes, format='png')
-
-            # Download chart as a file
-            st.download_button(
-                label='Download Chart',
-                data=img_bytes.getvalue(),
-                file_name='chart.png',
-                mime='image/png'
-            )
-            st.success('Chart exported successfully.')
 #================================================================================================================
 
 
