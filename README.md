@@ -47,5 +47,5 @@ To use this app, follow these steps:
 - Live Demo: https://rohitverma0021-india-census-analyzer-dashboard-app-x6gl39.streamlit.app/
 
 ## Contributors
-[Rohit Verma (Data Analyst Fresher)](https://www.linkedin.com/in/rohit-verma-3094b8224/)
+[Rohit Verma (Data Analyst)](https://www.linkedin.com/in/rohit-verma-3094b8224/)
 
