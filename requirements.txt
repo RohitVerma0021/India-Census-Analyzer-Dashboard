@@ -2,4 +2,3 @@ pandas
 plotly
 streamlit
 numpy
-U kaleido
