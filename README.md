@@ -1,4 +1,4 @@
-# India-Census-Analyzer-Dashboard
+# India-Census-Analyzer-Dashboard Web Application
 
 <img src="https://github.com/RohitVerma0021/India-Census-Analyzer-Dashboard/blob/master/census.png" height="300" width="550" >
 
