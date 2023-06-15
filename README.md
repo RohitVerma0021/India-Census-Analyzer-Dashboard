@@ -31,13 +31,13 @@ To use this app, follow these steps:
 To use this app, follow these steps:
 1. Select the desired options from the dropdown menus.
 2. The results will be displayed in a bar chart and scatter plot for easy comparison.
-## Screenshot
+## Screenshot.
 
 #### ***Overall India Visualization***
 <img src="https://github.com/RohitVerma0021/India-Census-Analyzer-Dashboard/blob/master/in.png" height="300" width="550" >
 
 
-#### ***State by State Comparison***
+#### ***State-by-State Comparison***
 
 <img src="https://github.com/RohitVerma0021/India-Census-Analyzer-Dashboard/blob/master/second%20screenshot.png" height="300" width="550" >
 
